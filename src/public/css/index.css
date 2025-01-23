@@ -1,0 +1,158 @@
+/* index.css */
+
+/* Header Styles */
+.header {
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Main Content Styles */
+.contact-form__content {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form__heading h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #5a5a5a;
+    text-align: center;
+}
+
+/* Form Styles */
+.form__group {
+    margin-bottom: 20px;
+}
+
+.form__group-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.form__label--item {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form__label--required {
+    font-size: 14px;
+    color: #e74c3c;
+    margin-left: 8px;
+}
+
+.form__group-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__input--text input,
+.form__input--textarea textarea,
+.form__input--select select {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    /* フォーム項目間の余白を調整 */
+}
+
+.form__input--textarea textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form__input--radio {
+    display: flex;
+    flex-direction: column;
+    /* ラジオボタンを縦に並べる */
+    gap: 10px;
+    /* ラジオボタンの間隔 */
+}
+
+.form__input--radio label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* ラジオボタンとラベルの間隔 */
+}
+
+.form__input--radio input {
+    margin-right: 5px;
+}
+
+/* Button Styles */
+.form__button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form__button-submit {
+    background-color: #6c757d;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    /* ボタンが全幅になるように */
+}
+
+.form__button-submit:hover {
+    background-color: #5a6268;
+}
+
+/* Error Message Styles */
+form p {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-form__content {
+        padding: 15px;
+        /* モバイルでの余白を調整 */
+    }
+
+    .form__group {
+        margin-bottom: 15px;
+    }
+
+    .form__input--text input,
+    .form__input--textarea textarea,
+    .form__input--select select {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .form__button-submit {
+        width: 100%;
+    }
+}
