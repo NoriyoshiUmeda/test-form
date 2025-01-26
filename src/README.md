@@ -3,10 +3,16 @@
 ## 環境構築 
 
 ### Dockerビルド
-1. `git clone <リポジトリURL>`
-2. `docker-compose up -d --build`
+git clone git@github.com:estra-inc/confirmation-test-contact-form.git
+DockerDesktopアプリを立ち上げる
+docker-compose up -d --build
+MacのM1・M2チップのPCの場合、no matching manifest for linux/arm64/v8 in the manifest list entriesのメッセージが表示されビルドができないことがあります。 エラーが発生する場合は、docker-compose.ymlファイルの「mysql」内に「platform」の項目を追加で記載してください
 
-※ MySQLは、OSによって起動しない場合があるので、それぞれのPCに合わせて `docker-compose.yml` ファイルを編集してください。
+mysql:
+    platform: linux/x86_64(この文追加)
+    image: mysql:8.0.26
+    environment:
+
 
 ### Laravel環境構築
 1. `docker-compose exec php bash`
