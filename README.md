@@ -2,7 +2,7 @@
 ## 環境構築 
 
 ### Dockerビルド
-git clone git@github.com:estra-inc/confirmation-test-contact-form.git
+git@github.com:NoriyoshiUmeda/test-form.git
 DockerDesktopアプリを立ち上げる
 docker-compose up -d --build
 MacのM1・M2チップのPCの場合、no matching manifest for linux/arm64/v8 in the manifest list entriesのメッセージが表示されビルドができないことがあります。 エラーが発生する場合は、docker-compose.ymlファイルの「mysql」内に「platform」の項目を追加で記載してください
